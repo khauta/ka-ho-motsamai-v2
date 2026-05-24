@@ -1,0 +1,6 @@
+{
+  "name": "Media Dashboard",
+  "description": "A high-fidelity media dashboard and profile view featuring videos, podcasts, dark theme, and analytics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

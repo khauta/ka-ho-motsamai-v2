@@ -1,0 +1,76 @@
+/* Global styles and Tailwind v4 imports */
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@500&display=swap');
+@import "tailwindcss";
+
+@theme {
+    --color-surface: #1c110a;
+    --color-surface-dim: #1c110a;
+    --color-surface-bright: #45362e;
+    --color-surface-container-lowest: #160c06;
+    --color-surface-container-low: #251912;
+    --color-surface-container: #291d16;
+    --color-surface-container-high: #35271f;
+    --color-surface-container-highest: #40322a;
+
+    --color-on-surface: #f6ded2;
+    --color-on-surface-variant: #e0c0af;
+
+    --color-primary: #ffb68b;
+    --color-on-primary: #522300;
+    --color-primary-container: #ff7a00;
+    --color-on-primary-container: #5c2800;
+
+    --color-secondary-container: #3e495d;
+    --color-on-secondary-container: #aeb9d0;
+
+    --color-error: #ffb4ab;
+    --color-on-error: #690005;
+
+    --color-outline: #a78b7c;
+    --color-outline-variant: #584235;
+    
+    --color-background: #1c110a;
+    --color-on-background: #f6ded2;
+
+    --font-display: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+    --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-on-background);
+}
+
+/* Glassmorphism panel utility */
+.glass-panel {
+    background-color: color-mix(in srgb, var(--color-surface-container) 70%, transparent);
+    backdrop-filter: blur(12px);
+    border: 1px solid color-mix(in srgb, #ffffff 10%, transparent);
+}
+
+/* Glow effects matching the design system */
+.orange-glow {
+    box-shadow: 0 0 20px color-mix(in srgb, var(--color-primary-container) 15%, transparent);
+}
+.orange-glow-hover:hover {
+    box-shadow: 0 0 20px color-mix(in srgb, var(--color-primary-container) 30%, transparent);
+    border-color: color-mix(in srgb, var(--color-primary-container) 50%, transparent);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--color-surface-container-highest);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary-container);
+}
